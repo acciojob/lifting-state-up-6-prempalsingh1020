@@ -16,7 +16,7 @@ const App = () => {
       const updatedTodos = todos.map((todo) =>
       todo.id === id ? { ...todo, completed: true } : todo
     );
-    console.log(id,todos)
+    // console.log(id,todos)
 
     setTodos(updatedTodos);
 

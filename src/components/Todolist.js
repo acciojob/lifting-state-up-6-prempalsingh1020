@@ -1,20 +1,23 @@
+
 import React from "react";
 
 const Todolist = ({ todos, handleComplete }) => {
   return (
     <div>
       {todos.map((todo) => (
-        <div key={todo.id}>
-          <span>{todo.text}</span>
+        <ul key={todo.id}>
+          <li>
+            <span>
+              {todo.text} {todo.completed && ""}
+            </span>
 
-          {!todo.completed ? (
-            <button onClick={() => handleComplete(todo.id)}>
-              Complete
-            </button>
-          ) : (
-            <span>Completed</span>
-          )}
-        </div>
+            {!todo.completed && (
+              <button onClick={() => handleComplete(todo.id)}>
+                Complete
+              </button>
+            )}
+          </li>
+        </ul>
       ))}
     </div>
   );
