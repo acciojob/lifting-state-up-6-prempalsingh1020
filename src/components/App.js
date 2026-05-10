@@ -25,10 +25,9 @@ const App = () => {
 
   return (
     <div>
-        {/* Do not remove the main div */}
-
-         <h1>TODO APP</h1>
-         {/* <h3>Child Component</h3> */}
+        
+        <h1>TODO APP</h1>
+         
          <Todolist todos={todos} handleComplete={handleComplete} />
 
     </div>
