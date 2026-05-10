@@ -6,13 +6,15 @@ const Todolist = ({ todos, handleComplete }) => {
       {
       todos.map(function(todo) {
         return (
-          <div key={todo.id}>
+          <ul key={todo.id}>
+            <li>
             <span>{todo.text}</span>
 
             <button onClick={()=>handleComplete(todo.id)}>
               Complete
             </button>
-          </div>
+            </li>
+          </ul>
         );
       })}
     </div>
